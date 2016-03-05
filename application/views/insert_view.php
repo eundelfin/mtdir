@@ -24,14 +24,14 @@
 <?php echo form_label('Region :'); ?> <?php echo form_error('dregion'); ?><br />
 <?php echo form_input(array('id' => 'dregion', 'name' => 'dregion')); ?><br />
 
-<?php echo form_label('Elevation :'); ?> <?php echo form_error('dmasl'); ?><br />
-<?php echo form_input(array('id' => 'dmasl', 'name' => 'dmasl')); ?><br />
+<?php echo form_label('Elevation :'); ?> <?php echo form_error('delevation'); ?><br />
+<?php echo form_input(array('id' => 'delevation', 'name' => 'delevation')); ?><br />
 
 <?php echo form_label('Difficulty Scale :'); ?> <?php echo form_error('ddificultyscale'); ?><br />
 <?php echo form_input(array('id' => 'ddificutlyscale', 'name' => 'ddificultyscale', 'placeholder' => 'Minor or Major')); ?><br />
 
-<?php echo form_label('Difficulty Class :'); ?> <?php echo form_error('ddifficultyclass'); ?><br />
-<?php echo form_input(array('id' => 'ddifficultyclass', 'name' => 'ddifficultyclass')); ?><br />
+<?php echo form_label('Difficulty Class :'); ?> <?php echo form_error('ddificultyclass'); ?><br />
+<?php echo form_input(array('id' => 'ddificultyclass', 'name' => 'ddificultyclass')); ?><br />
 
 <?php echo form_label('Trail Class :'); ?> <?php echo form_error('dtrailclass'); ?><br />
 <?php echo form_input(array('id' => 'dtrailclass', 'name' => 'dtrailclass')); ?><br />
