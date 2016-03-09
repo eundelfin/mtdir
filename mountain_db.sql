@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2016 at 02:45 PM
+-- Generation Time: Mar 06, 2016 at 04:28 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.5.30
 
@@ -23,16 +23,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `guide`
+-- Table structure for table `guide_list`
 --
 
-CREATE TABLE `guide` (
+CREATE TABLE `guide_list` (
   `guide_id` int(11) NOT NULL,
   `mountain_id` int(11) NOT NULL,
   `guide_lastname` varchar(255) DEFAULT NULL,
   `guide_firstname` varchar(255) DEFAULT NULL,
-  `guide_contactnum` int(11) DEFAULT NULL,
-  `guide_email` varchar(50) DEFAULT NULL,
+  `guide_mobile` varchar(255) DEFAULT NULL,
+  `guide_email` varchar(255) DEFAULT NULL,
   `guide_groupname` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,9 +61,9 @@ CREATE TABLE `mountain_list` (
 --
 
 --
--- Indexes for table `guide`
+-- Indexes for table `guide_list`
 --
-ALTER TABLE `guide`
+ALTER TABLE `guide_list`
   ADD PRIMARY KEY (`guide_id`),
   ADD KEY `fk_guideid` (`mountain_id`);
 
@@ -74,13 +74,27 @@ ALTER TABLE `mountain_list`
   ADD PRIMARY KEY (`mountain_id`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `guide_list`
+--
+ALTER TABLE `guide_list`
+  MODIFY `guide_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mountain_list`
+--
+ALTER TABLE `mountain_list`
+  MODIFY `mountain_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `guide`
+-- Constraints for table `guide_list`
 --
-ALTER TABLE `guide`
+ALTER TABLE `guide_list`
   ADD CONSTRAINT `fk_guideid` FOREIGN KEY (`mountain_id`) REFERENCES `mountain_list` (`mountain_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
